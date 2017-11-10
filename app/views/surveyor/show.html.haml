@@ -7,7 +7,7 @@
     .col-md-12
       = simple_form_for(@response_set, as: :r, url: surveyor.update_my_survey_path, html: {method: :put, id: "survey_form", class: @survey.dom_class}) do |f|
         - @survey.sections.each do |section|
-          = div_for section do
+          %div{ class: 'survey_section', id: "survey_section_#{section.id}" }
             %span.title= strip_tags(section.title)
             - group_questions = []
             - answered_questions = []
