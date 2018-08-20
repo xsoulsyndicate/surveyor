@@ -8,7 +8,7 @@ case env_rails_version
 when "master"
   {github: "rails/rails"}
 when "default"
-  gem "rails", "~> 4.0.0"
+  gem "rails", "~> 5.2.1"
   # A JS runtime is required for Rails 4.0+
   gem 'therubyracer', platforms: :ruby
 when /^3.2/
@@ -24,5 +24,5 @@ else
   fail "Unsupported Rails version #{ENV['RAILS_VERSION']}"
 end
 
-gem 'simple_form', '3.5.0'
+gem 'simple_form', '4.0.1'
 gem 'bootstrap-sass', '~> 3.1.1'
